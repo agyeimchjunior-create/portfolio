@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+
+  --color-glass-dark: rgba(10, 10, 10, 0.8);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white/90 min-h-screen font-inter;
+    background: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 100%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-outfit;
+  }
+}
+
+* {
+  @apply box-border scroll-smooth;
+}
+
+::selection {
+  @apply bg-white text-black;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#050505];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee 40s linear infinite;
+}
+
+.text-outline-thin {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes beep {
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    transform: scale(1.02);
+  }
+}
+
+.animate-beep {
+  animation: beep 2s ease-in-out infinite;
+}
