@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
     const sectionRef = useRef(null);
@@ -11,38 +8,20 @@ const About = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Initial states
-            gsap.set(imageRef.current, { x: -100, opacity: 0 });
-            gsap.set(textRef.current, { x: 100, opacity: 0 });
-
-            // Entrance animation
-            gsap.to(imageRef.current, {
-                x: 0,
-                opacity: 1,
-                duration: 1.2,
+            gsap.from(imageRef.current, {
+                x: -100,
+                opacity: 0,
+                duration: 1.5,
+                ease: "power4.out"
+            });
+            gsap.from(textRef.current, {
+                x: 100,
+                opacity: 0,
+                duration: 1.5,
                 ease: "power4.out",
                 delay: 0.2
             });
-
-            gsap.to(textRef.current, {
-                x: 0,
-                opacity: 1,
-                duration: 1.2,
-                ease: "power4.out",
-                delay: 0.4
-            });
-
-            // Floating background blobs animation
-            gsap.to(".blob", {
-                y: "random(-20, 20)",
-                x: "random(-20, 20)",
-                duration: "random(2, 4)",
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
-            });
         }, sectionRef);
-
         return () => ctx.revert();
     }, []);
 
@@ -59,7 +38,7 @@ const About = () => {
                     <div ref={imageRef} className="relative group">
                         <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
                             <img
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1974"
+                                src="/images/me.jpg"
                                 alt="Agyei Michael Junior"
                                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                             />
@@ -103,9 +82,22 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="pt-10">
+                        <div className="pt-10 flex flex-wrap gap-6 items-center">
                             <a
-                                href="#contact"
+                                href="/cv.pdf"
+                                download="Agyei_Michael_Junior_CV.pdf"
+                                className="inline-flex items-center gap-4 px-8 py-4 bg-white text-black rounded-2xl font-bold hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] group/cv"
+                            >
+                                <div className="p-2 bg-black/5 rounded-lg group-hover/cv:bg-black group-hover/cv:text-white transition-colors">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4M7 10l5 5 5-5M12 15V3" />
+                                    </svg>
+                                </div>
+                                <span className="uppercase tracking-widest text-sm">Download My CV</span>
+                            </a>
+
+                            <a
+                                href="/contact"
                                 className="inline-flex items-center gap-4 group"
                             >
                                 <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-500">

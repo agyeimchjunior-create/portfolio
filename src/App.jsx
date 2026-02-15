@@ -2,9 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import ProjectDetails from './pages/ProjectDetails'
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import Pyrolysis from './pages/Pyrolysis';
+import Tire from './pages/pyrolysis/Tire';
+import Plastic from './pages/pyrolysis/Plastic';
+import ProjectDetails from './pages/ProjectDetails';
 
 const App = () => {
   return (
@@ -15,6 +19,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/pyrolysis" element={<Pyrolysis />} />
+            <Route path="/pyrolysis/tire" element={<Tire />} />
+            <Route path="/pyrolysis/plastic" element={<Plastic />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
             {/* Fallback route */}

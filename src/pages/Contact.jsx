@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { Mail, Github, Linkedin, MessageSquare, Send, CheckCircle2 } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
+import { Mail, MessageSquare, Send, Github, Linkedin, Phone, CheckCircle2 } from "lucide-react";
+import { gsap } from "gsap";
 
 const Contact = () => {
-    const [result, setResult] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [result, setResult] = useState("");
     const sectionRef = useRef(null);
 
     const onSubmit = async (event) => {
@@ -13,7 +13,6 @@ const Contact = () => {
         setResult("Sending....");
 
         const formData = new FormData(event.target);
-        // Using the user's provided access key
         formData.append("access_key", "d1a0f405-e197-497d-8f2e-1bc4876160b7");
 
         try {
@@ -84,11 +83,15 @@ const Contact = () => {
                             <h3 className="text-2xl font-bold">Socials</h3>
                         </div>
                         <div className="flex gap-4 ml-20">
-                            {[Github, Linkedin].map((Icon, i) => (
-                                <a key={i} href="#" className="p-3 rounded-full border border-white/10 hover:bg-white/10 transition-all">
-                                    <Icon size={20} />
-                                </a>
-                            ))}
+                            <a href="https://github.com/agyeimchjunior-create" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center group/social">
+                                <Github size={20} className="group-hover/social:scale-110 transition-transform" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/michael-agyei-jnr-976604379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center group/social">
+                                <Linkedin size={20} className="group-hover/social:scale-110 transition-transform" />
+                            </a>
+                            <a href="https://wa.me/233545722659" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center group/social">
+                                <Phone size={20} className="group-hover/social:scale-110 transition-transform" />
+                            </a>
                         </div>
                     </div>
                 </div>

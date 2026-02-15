@@ -166,7 +166,7 @@ const Home = () => {
                 </section>
 
                 {/* Projects Section Header */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 header-item">
                     <div className="max-w-xl">
                         <h2 className="text-4xl font-bold mb-4 tracking-tight">Crafting Web Excellence</h2>
                         <p className="text-white/40 leading-relaxed">A selection of my latest works, ranging from complex SaaS dashboards to creative brand experiences.</p>
@@ -177,7 +177,7 @@ const Home = () => {
                 </div>
 
                 {/* Projects Grid */}
-                <div ref={gridRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <div id="projects-grid" ref={gridRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     {projects.map((project) => (
                         <div key={project.id} className="project-card group relative">
                             <div className="relative h-full rounded-[2rem] overflow-hidden bg-[#0A0A0A] border border-white/5 transition-all duration-700 group-hover:border-white/20">
@@ -204,9 +204,6 @@ const Home = () => {
                                             <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tighter">
                                                 {project.title}
                                             </h3>
-                                            <p className="text-white/40 text-sm line-clamp-2 md:line-clamp-none transition-all duration-500 opacity-0 group-hover:opacity-100">
-                                                {project.description}
-                                            </p>
                                         </div>
 
                                         {/* Action Buttons */}
@@ -255,4 +252,3 @@ const Home = () => {
 };
 
 export default Home;
-

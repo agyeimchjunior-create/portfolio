@@ -1,5 +1,5 @@
-import React from 'react';
-import { Home, User, Briefcase, Mail } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Home, User, Briefcase, Mail, Sun, Moon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -15,7 +15,6 @@ const Navbar = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent"></div>
                     </div>
-
                 </Link>
             </div>
 
@@ -32,11 +31,10 @@ const Navbar = () => {
 
                 <Link to="/projects" className="group flex items-center gap-2 text-white/70 hover:text-white transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/5">
                     <Briefcase size={18} className="group-hover:-translate-y-0.5 transition-transform duration-300" />
-                    <span className="hidden md:block font-medium text-sm">other Projects</span>
+                    <span className="hidden md:block font-medium text-sm">Projects</span>
                 </Link>
 
                 <Link to="/contact" className="relative group flex items-center gap-2 bg-white text-black px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] overflow-hidden animate-beep">
-                    <div className="absolute inset-0 bg-radial-[circle,rgba(255,255,255,0.8)_0%,transparent_70%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] pointer-events-none"></div>
                     <Mail size={18} className="relative z-10" />
                     <span className="relative z-10">Contact</span>
                 </Link>
