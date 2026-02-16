@@ -21,27 +21,25 @@ const Plastic = () => {
     }, []);
 
     const methodologyImages = [
-        "/images/pyrolysis/plastic/meth-1.jpg",
-        "/images/pyrolysis/plastic/meth-2.jpg",
-        "/images/pyrolysis/plastic/meth-3.jpg",
-        "/images/pyrolysis/plastic/meth-4.jpg",
-        "/images/pyrolysis/plastic/meth-5.jpg",
-        "/images/pyrolysis/plastic/meth-6.jpg",
-        "/images/pyrolysis/plastic/meth-7.jpg",
-        "/images/pyrolysis/plastic/meth-8.jpg",
+        "/images/pyrolysis/plastic/meth-1.jpeg",
+        "/images/pyrolysis/plastic/meth-2.jpeg",
+        "/images/pyrolysis/plastic/meth-3.jpeg",
+        "/images/pyrolysis/plastic/meth-4.jpeg",
+        "/images/pyrolysis/plastic/meth-5.jpeg",
+        "/images/pyrolysis/plastic/meth-6.jpeg",
+        "/images/pyrolysis/plastic/meth-7.jpeg",
+        "/images/pyrolysis/plastic/meth-8.jpeg",
     ];
 
     const resultImages = [
         "/images/pyrolysis/plastic/res-1.jpg",
         "/images/pyrolysis/plastic/res-2.jpg",
-        "/images/pyrolysis/plastic/res-3.jpg",
-        "/images/pyrolysis/plastic/res-4.jpg",
-        "/images/pyrolysis/plastic/res-5.jpg",
-        "/images/pyrolysis/plastic/res-6.jpg",
-        "/images/pyrolysis/plastic/res-7.jpg",
-        "/images/pyrolysis/plastic/res-8.jpg",
-        "/images/pyrolysis/plastic/res-9.jpg",
-        "/images/pyrolysis/plastic/res-10.jpg",
+        "/images/pyrolysis/plastic/res-3.png",
+        "/images/pyrolysis/plastic/res-4.png",
+        "/images/pyrolysis/plastic/res-5.png",
+        "/images/pyrolysis/plastic/res-6.png",
+        "/images/pyrolysis/plastic/res-7.png",
+        "/images/pyrolysis/plastic/res-8.png",
     ];
 
     return (
@@ -64,8 +62,9 @@ const Plastic = () => {
             <section className="mb-20 reveal">
                 <h2 className="text-3xl font-bold mb-8 italic border-l-4 border-blue-500 pl-6">Project Overview</h2>
                 <p className="text-lg text-white/60 leading-relaxed font-light">
-                    Municipal plastic waste is one of the most persistent pollutants in the modern world. This project explores advanced catalytic pyrolysis to transform varied plastic polymers—specifically PE, PP, and PS—into high-quality liquid fuel blends. By utilizing specific catalysts, we aim to lower the required reaction temperature and improve the octane rating of the resulting fuel.
-                </p>
+                    This project focused on converting waste plastic into usable fuel through a controlled thermal process. It was carried out at Osu Beach in Accra with the aim of addressing two key challenges: plastic pollution along the coastline and limited access to affordable fuel for local fishermen.
+
+                    The initiative was designed to demonstrate how waste plastic materials can be transformed into a valuable energy resource, while also educating members of the indigenous fishing community on sustainable waste management practices.                </p>
             </section>
 
             {/* Objectives */}
@@ -73,10 +72,10 @@ const Plastic = () => {
                 <h2 className="text-3xl font-bold mb-8 italic border-l-4 border-blue-500 pl-6">Objectives</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {[
-                        "Standardize the catalytic process for diverse plastic feedstocks.",
-                        "Maximize the conversion efficiency into high-grade diesel and kerosene equivalents.",
-                        "Reduce the solid residue (char) to less than 5% of initial weight.",
-                        "Analyze the thermodynamic profile of the catalytic reaction."
+                        "To reduce plastic waste pollution at Osu Beach",
+                        "To train the local community on converting waste plastic into fuel",
+                        "To provide a sustainable source of fuel for local fishermen",
+                        "To demonstrate the potential of pyrolysis as a waste management solution"
                     ].map((obj, i) => (
                         <div key={i} className="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
                             <CheckCircle2 className="text-blue-500 shrink-0" size={24} />
@@ -94,7 +93,7 @@ const Plastic = () => {
                         General Experimental Setup
                     </div>
                     <img
-                        src="/images/pyrolysis/plastic/general-setup.jpg"
+                        src="/images/pyrolysis/plastic/general-setup.jpeg"
                         alt="General Experimental Setup"
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                         onError={(e) => e.target.style.display = 'none'}
@@ -106,8 +105,20 @@ const Plastic = () => {
             <section className="mb-20 reveal">
                 <h2 className="text-3xl font-bold mb-8 italic border-l-4 border-blue-500 pl-6">Materials and Methodology</h2>
                 <p className="text-lg text-white/60 leading-relaxed font-light mb-12">
-                    The research utilized a semi-batch reactor coupled with a multi-stage condenser. The methodology involved shredded plastic waste, alumina-silica catalysts, and a precisely programmed dual-zone heating mantle to ensure uniform thermal distribution.
-                </p>
+                    The project utilized collected waste plastics from the beach environment, a small-scale thermal conversion unit, heating equipment, and collection containers for the produced fuel. Basic monitoring tools were used to observe temperature and product yield.
+
+                    All materials were selected to demonstrate a practical and replicable process suitable for community-level application.
+                    Waste plastics gathered from the beach were sorted and prepared before undergoing a controlled heating process in the absence of oxygen. This thermal conversion process produced liquid fuel, combustible gases, and solid residue.
+
+                    Community members were engaged during the demonstration phase, where they were educated on:
+
+                    The environmental impact of plastic waste
+
+                    The principles behind plastic-to-fuel conversion
+
+                    Safe handling and potential applications of the produced fuel
+
+                    The liquid fuel produced was tested for practical usability, particularly for small-scale marine applications such as canoe engines.                </p>
 
                 {/* 8 Methodology Images */}
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -149,8 +160,19 @@ const Plastic = () => {
                     ))}
                 </div>
                 <p className="text-lg text-white/60 leading-relaxed font-light mt-8">
-                    The catalytic conversion provided a superior product compared to traditional thermal pyrolysis. The resulting liquid displayed a caloric value of 44 MJ/kg, highly comparable to industrial-grade diesel. GC-MS analysis confirmed a high concentration of C8-C20 hydrocarbons.
-                </p>
+                    The project successfully demonstrated that waste plastics collected from Osu Beach can be converted into usable fuel. The produced liquid fuel showed potential as an alternative energy source for fuelling fishing canoes, reducing dependence on conventional fuels.
+
+                    In addition to energy production, the initiative raised environmental awareness within the community and promoted responsible waste collection practices.
+
+                    Key outcomes included:
+
+                    Reduction of visible plastic waste along parts of the beach
+
+                    Practical demonstration of fuel production from waste
+
+                    Increased knowledge transfer to indigenous fishermen
+
+                    Promotion of sustainable livelihood support                </p>
             </section>
 
             {/* Conclusion & Declaration */}
@@ -158,8 +180,9 @@ const Plastic = () => {
                 <h2 className="text-3xl font-bold mb-8 italic">Conclusion & Declaration</h2>
                 <div className="space-y-6 text-white/60 leading-relaxed font-light italic">
                     <p>
-                        "This study demonstrates that the integration of catalysis in plastic pyrolysis significantly enhances fuel quality and economic viability. It provides a scalable solution to the global plastic pollution crisis while generating renewable energy resources."
-                    </p>
+                        This project demonstrated how waste plastics collected at Osu Beach can be converted into usable fuel to support local fishing activities while reducing environmental pollution. The initiative empowered indigenous community members with practical skills in plastic-to-fuel production.
+
+                        The project was funded by the French Embassy, while training and capacity-building were carried out by my university, ensuring sustainable knowledge transfer and long-term community impact.                    </p>
                     <div className="pt-8 border-t border-white/5">
                         <p className="text-sm uppercase tracking-widest font-bold text-white mb-2">Declaration</p>
                         <p className="text-xs">
@@ -172,18 +195,12 @@ const Plastic = () => {
             {/* Downloads */}
             <div className="reveal flex flex-wrap gap-6 pt-12 border-t border-white/5">
                 <a
-                    href="/files/plastic-to-fuel-article.pdf"
-                    download
-                    className="flex items-center gap-4 px-8 py-4 bg-white text-black rounded-2xl font-black hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
-                >
-                    <FileText size={20} /> DOWNLOAD FULL ARTICLE
-                </a>
-                <a
-                    href="/files/plastic-project-certificate.pdf"
-                    download
+                    href="/files/plastic-project-certificate.jpeg"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-4 px-8 py-4 bg-blue-600/10 border border-blue-500/20 text-blue-400 rounded-2xl font-black hover:bg-blue-600 hover:text-white transition-all shadow-[0_0_20px_rgba(37,99,235,0.1)]"
                 >
-                    <Award size={20} /> DOWNLOAD CERTIFICATE
+                    <Award size={20} /> VIEW CERTIFICATE
                 </a>
             </div>
         </div>
