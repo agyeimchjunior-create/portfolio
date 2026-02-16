@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ArrowLeft, FileText, CheckCircle2, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Footer from '../../components/Footer';
 
 const Plastic = () => {
     const sectionRef = useRef(null);
@@ -203,6 +204,8 @@ const Plastic = () => {
                     <Award size={20} /> VIEW CERTIFICATE
                 </a>
             </div>
+
+            <Footer />
         </div>
     );
 };

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ArrowLeft, FileText, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Footer from '../../components/Footer';
 
 const Tire = () => {
     const sectionRef = useRef(null);
@@ -213,6 +214,8 @@ const Tire = () => {
                     <FileText size={20} /> DOWNLOAD FULL ARTICLE
                 </a>
             </div>
+
+            <Footer />
         </div>
     );
 };

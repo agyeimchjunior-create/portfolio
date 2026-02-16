@@ -1,57 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { projectsData as projects } from '../data/projectsData';
+import Marquee from '../components/Marquee';
+import Footer from '../components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const projects = [
-    {
-        id: 1,
-        title: "",
-        description: "",
-        image: "/images/prudence-data.jpeg",
-        previewUrl: "https://prudencedata-service.netlify.app/",
-        category: "Data Analytics"
-    },
-    {
-        id: 2,
-        title: "",
-        description: "",
-        image: "/images/hotel-img.jpeg",
-        previewUrl: "https://koolahotel.netlify.app/",
-        category: "Hospitality"
-    },
-    {
-        id: 3,
-        title: "",
-        description: "",
-        image: "/images/cocktail-web.jpeg",
-        previewUrl: "https://koola-cocktail.netlify.app/",
-        category: "Food & Beverage"
-    },
-    {
-        id: 4,
-        title: "",
-        description: "",
-        image: "/images/university-website.jpeg",
-        previewUrl: "https://koolacityedu.netlify.app/",
-        category: "Education"
-    },
-    {
-        id: 5,
-        title: "",
-        description: "",
-        image: "/images/todo-list img.jpeg",
-        previewUrl: "https://mytodo-lister.netlify.app/",
-        category: "Productivity"
-    }
-];
-
 const ScrambleText = ({ text }) => {
     const [display, setDisplay] = useState('');
-    const chars = 'Welcome to my Portfolio I am....';
+    const chars = 'ABCDEFGHIJKLMNPRSTUVWXYZ0123456789';
 
     useEffect(() => {
         let iteration = 0;
@@ -74,27 +34,6 @@ const ScrambleText = ({ text }) => {
     }, [text]);
 
     return <span className="font-mono">{display}</span>;
-};
-
-const Marquee = () => {
-    return (
-        <div className="relative flex overflow-x-hidden border-y border-white/5 bg-white/[0.02] backdrop-blur-sm py-10 md:py-20 group">
-            <div className="animate-marquee whitespace-nowrap flex items-center">
-                {[...Array(10)].map((_, i) => (
-                    <span key={i} className="text-6xl md:text-9xl font-black text-white/10 mx-8 md:mx-16 uppercase tracking-tighter group-hover:text-white/20 transition-colors">
-                        Let's work together <span className="text-outline-thin text-transparent ml-4 opacity-50">•</span>
-                    </span>
-                ))}
-            </div>
-            <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center">
-                {[...Array(10)].map((_, i) => (
-                    <span key={i} className="text-6xl md:text-9xl font-black text-white/10 mx-8 md:mx-16 uppercase tracking-tighter group-hover:text-white/20 transition-colors">
-                        Let's work together <span className="text-outline-thin text-transparent ml-4 opacity-50">•</span>
-                    </span>
-                ))}
-            </div>
-        </div>
-    );
 };
 
 const Home = () => {
@@ -121,7 +60,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="relative min-h-screen overflow-x-hidden">
+        <div className="relative min-h-screen overflow-x-hidden bg-[#050505]">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] -z-10"></div>
@@ -129,7 +68,6 @@ const Home = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
                 {/* Hero Section */}
                 <section className="text-center mb-24 relative py-16 px-6 rounded-[3rem] overflow-hidden border border-white/5">
-                    {/* Clear Background Coding Image */}
                     <div className="absolute inset-0 z-0">
                         <img
                             src="/images/hero-img.jpg"
@@ -141,13 +79,12 @@ const Home = () => {
                     <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-white/5 bg-white/5 backdrop-blur-md relative z-10">
                         <span className="text-[10px] uppercase tracking-[0.4em] text-white/60 font-medium">Available for freelance</span>
                     </div>
-                    <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none relative z-10">
+                    <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none relative z-10 text-white">
                         <ScrambleText text="Agyei Michael Junior" />
                     </h1>
                     <p className="text-xl md:text-2xl text-white/50 max-w-3xl mx-auto font-light leading-relaxed mb-12 relative z-10">
-                        Creative Developer specializing in building <span className="text-white">exceptional digital interfaces</span> and robust back-end systems.
+                        Material Science Engineer and Frontend Developer passionate about sustainability and innovation.
                     </p>
-
 
                     <div className="flex flex-col items-center gap-6 relative z-10">
                         <div className="flex justify-center gap-4">
@@ -156,20 +93,18 @@ const Home = () => {
                             <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/20 self-center"></div>
                         </div>
 
-                        {/* Scroll Indicator */}
                         <div className="flex flex-col items-center gap-2 text-white/80 animate-bounce mt-8 relative z-10">
                             <span className="text-[10px] uppercase tracking-widest font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">Scroll</span>
                             <div className="w-px h-12 bg-gradient-to-b from-white to-transparent shadow-[0_0_15px_rgba(255,255,255,0.5)]"></div>
                         </div>
                     </div>
-
                 </section>
 
                 {/* Projects Section Header */}
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 header-item">
                     <div className="max-w-xl">
-                        <h2 className="text-4xl font-bold mb-4 tracking-tight">Crafting Web Excellence</h2>
-                        <p className="text-white/40 leading-relaxed">A selection of my latest works, ranging from complex SaaS dashboards to creative brand experiences.</p>
+                        <h2 className="text-4xl font-bold mb-4 tracking-tight text-white">Crafting Web Excellence</h2>
+                        <p className="text-white/40 leading-relaxed">A showcase of my latest frontend projects, featuring dynamic web interfaces, interactive designs, and visually engaging digital experiences.</p>
                     </div>
                     <div className="text-right">
                         <span className="block text-4xl font-black text-white/10 italic leading-none">05 PROJECTS</span>
@@ -180,7 +115,7 @@ const Home = () => {
                 <div id="projects-grid" ref={gridRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     {projects.map((project) => (
                         <div key={project.id} className="project-card group relative">
-                            <div className="relative h-full rounded-[2rem] overflow-hidden bg-[#0A0A0A] border border-white/5 transition-all duration-700 group-hover:border-white/20">
+                            <div className="relative h-full rounded-[2rem] overflow-hidden bg-[#0A0A0A] border border-white/5 transition-all duration-700 group-hover:border-white/20 shadow-2xl">
                                 {/* Project Image */}
                                 <div className="relative aspect-[4/3] overflow-hidden">
                                     <img
@@ -188,7 +123,6 @@ const Home = () => {
                                         alt={project.title}
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-[0.5] group-hover:grayscale-0"
                                     />
-                                    {/* Shadow Overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
                                 </div>
 
@@ -232,21 +166,9 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Let's Work Together Slider */}
-            <div className="mt-20 pb-40">
-                <Marquee />
-                <div className="mt-12 text-center">
-                    <Link
-                        to="/contact"
-                        className="inline-flex items-center gap-4 px-12 py-6 bg-white text-black rounded-full font-black text-lg hover:scale-105 transition-transform shadow-[0_0_50px_rgba(255,255,255,0.2)]"
-                    >
-                        CONTACT ME
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" />
-                        </svg>
-                    </Link>
-                </div>
-            </div>
+            {/* Reusable Marquee and Footer */}
+            <Marquee />
+            <Footer />
         </div>
     );
 };
