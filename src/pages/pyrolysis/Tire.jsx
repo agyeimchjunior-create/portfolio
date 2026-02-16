@@ -42,7 +42,7 @@ const Tire = () => {
         "/images/pyrolysis/tire/res-7.png",
         "/images/pyrolysis/tire/res-8.jpg",
         "/images/pyrolysis/tire/res-9.jpg",
-        "/images/pyrolysis/tire/res-10.jpg",
+        "/images/pyrolysis/tire/res-10.png",
     ];
 
     return (
