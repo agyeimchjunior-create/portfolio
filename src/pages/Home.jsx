@@ -79,7 +79,7 @@ const Home = () => {
                     <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-white/5 bg-white/5 backdrop-blur-md relative z-10">
                         <span className="text-[10px] uppercase tracking-[0.4em] text-white/60 font-medium">Available for freelance</span>
                     </div>
-                    <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none relative z-10 text-white">
+                    <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] drop-shadow-[0_0_20px_rgba(252,246,186,0.3)]">
                         <ScrambleText text="Agyei Michael Junior" />
                     </h1>
                     <p className="text-xl md:text-2xl text-white/50 max-w-3xl mx-auto font-light leading-relaxed mb-12 relative z-10">
@@ -135,9 +135,7 @@ const Home = () => {
                                                     {project.category}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tighter">
-                                                {project.title}
-                                            </h3>
+
                                         </div>
 
                                         {/* Action Buttons */}

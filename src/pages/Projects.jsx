@@ -16,14 +16,18 @@ const Projects = () => {
                 duration: 1,
                 ease: "power3.out"
             });
-            gsap.from(".category-card", {
-                y: 100,
-                opacity: 0,
-                duration: 1.2,
-                stagger: 0.3,
-                ease: "power4.out",
-                delay: 0.2
-            });
+            gsap.fromTo(".category-card",
+                { y: 100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    stagger: 0.3,
+                    ease: "power4.out",
+                    delay: 0.2,
+                    clearProps: "all"
+                }
+            );
         }, sectionRef);
         return () => ctx.revert();
     }, []);
@@ -83,7 +87,7 @@ const Projects = () => {
                     bg-white/15 backdrop-blur-xl 
                     border border-white/20 hover:border-white/40 
                     transition-all duration-700 
-                    shadow-2xl will-change-transform"
+                    shadow-2xl"
                     >
                         <div className="absolute inset-0 z-0 rounded-[3.5rem] bg-gradient-to-br from-orange-500/10 to-transparent pointer-events-none"></div>
                         <div className="absolute inset-0 z-0 rounded-[3.5rem] bg-gradient-to-br from-orange-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     const sectionRef = useRef(null);
