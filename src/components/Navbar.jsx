@@ -7,7 +7,7 @@ const Navbar = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl bg-card-main backdrop-blur-xl border border-border-main px-6 py-3 rounded-full flex justify-between items-center z-50 shadow-2xl font-outfit transition-all duration-500">
+        <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-6xl bg-card-main backdrop-blur-xl border border-border-main px-4 md:px-6 py-3 rounded-full flex justify-between items-center z-50 shadow-2xl font-outfit transition-all duration-500">
             <div className="flex items-center">
                 <Link to="/" className="flex items-center gap-3 group">
                     <div className="relative w-10 h-10 overflow-hidden rounded-xl border border-border-main bg-bg-main/5 transition-all duration-500 group-hover:border-text-dim/40 group-hover:scale-110">
@@ -52,9 +52,9 @@ const Navbar = () => {
                     </div>
                 </button>
 
-                <Link to="/contact" className="relative group flex items-center gap-2 bg-text-main text-bg-main px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl overflow-hidden animate-beep">
+                <Link to="/contact" className="relative group flex items-center gap-2 bg-text-main text-bg-main px-4 md:px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl overflow-hidden animate-beep">
                     <Mail size={18} className="relative z-10" />
-                    <span className="relative z-10">Contact</span>
+                    <span className="hidden md:block relative z-10">Contact</span>
                 </Link>
             </div>
         </nav>
