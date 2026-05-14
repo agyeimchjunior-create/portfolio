@@ -46,25 +46,25 @@ const Tire = () => {
     ];
 
     return (
-        <div ref={sectionRef} className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto font-inter text-white">
+        <div ref={sectionRef} className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto font-inter text-text-main">
             {/* Header */}
             <div className="mb-16 reveal">
-                <Link to="/pyrolysis" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors mb-8 group">
+                <Link to="/pyrolysis" className="inline-flex items-center gap-2 text-text-dim hover:text-text-main transition-colors mb-8 group">
                     <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back to Research
                 </Link>
                 <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 italic">
                     WASTE TIRE <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">PYROLYSIS</span>
                 </h1>
-                <div className="flex flex-wrap gap-4 items-center text-sm uppercase tracking-widest text-white/60 font-bold">
-                    <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5">Research Project</span>
-                    <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5">2026</span>
+                <div className="flex flex-wrap gap-4 items-center text-sm uppercase tracking-widest text-text-dim font-bold">
+                    <span className="px-4 py-1.5 rounded-full border border-border-main bg-card-main">Research Project</span>
+                    <span className="px-4 py-1.5 rounded-full border border-border-main bg-card-main">2026</span>
                 </div>
             </div>
 
             {/* Project Overview */}
             <section className="mb-20 reveal">
                 <h2 className="text-3xl font-bold mb-8 italic border-l-4 border-orange-500 pl-6">Project Overview</h2>
-                <div className="text-lg text-white/60 leading-relaxed font-light space-y-4">
+                <div className="text-lg text-text-dim leading-relaxed font-light space-y-4">
                     <p>
                         This project investigates the conversion of waste tires into useful products through the process of pyrolysis. Waste tires pose significant environmental challenges due to their non-biodegradable nature. The study explores pyrolysis as a sustainable waste management solution that produces valuable by-products such as pyrolysis oil, carbon black, and combustible gases.
                     </p>
@@ -84,9 +84,9 @@ const Tire = () => {
                         "To evaluate the environmental and economic potential of the process",
                         "To minimize environmental emissions during the conversion process."
                     ].map((obj, i) => (
-                        <div key={i} className="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <div key={i} className="flex gap-4 p-6 rounded-2xl bg-card-main border border-border-main">
                             <CheckCircle2 className="text-orange-500 shrink-0" size={24} />
-                            <p className="text-white/80 font-medium">{obj}</p>
+                            <p className="text-text-main font-medium">{obj}</p>
                         </div>
                     ))}
                 </div>
@@ -95,7 +95,7 @@ const Tire = () => {
             {/* General Setup */}
             <section className="mb-20 reveal">
                 <h2 className="text-3xl font-bold mb-8 italic border-l-4 border-orange-500 pl-6">General Experimental Setup</h2>
-                <div className="relative aspect-video rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/5 group">
+                <div className="relative aspect-video rounded-[2.5rem] overflow-hidden border border-border-main bg-card-main group">
                     <div className="absolute inset-0 flex items-center justify-center text-white/10 italic text-sm uppercase tracking-widest text-center px-4">
                         General Experimental Setup
                     </div>
@@ -111,7 +111,7 @@ const Tire = () => {
             {/* Materials and Methodology */}
             <section className="mb-20 reveal">
                 <h2 className="text-3xl font-bold mb-8 italic border-l-4 border-orange-500 pl-6">Materials and Methodology</h2>
-                <div className="text-lg text-white/60 leading-relaxed font-light mb-12 space-y-6">
+                <div className="text-lg text-text-dim leading-relaxed font-light mb-12 space-y-6">
                     <p>
                         The materials used for this experiment included waste tire samples, a laboratory-scale pyrolysis reactor, a heating system, a condenser unit, collection containers, and measuring instruments such as thermometers and weighing scales.
                     </p>
@@ -136,7 +136,7 @@ const Tire = () => {
                 {/* 8 Methodology Images */}
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {methodologyImages.map((src, i) => (
-                        <div key={i} className="relative group aspect-square rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                        <div key={i} className="relative group aspect-square rounded-2xl overflow-hidden border border-border-main bg-card-main">
                             <div className="absolute top-4 left-4 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-orange-500 text-black font-black text-xs">
                                 0{i + 1}
                             </div>
@@ -159,7 +159,7 @@ const Tire = () => {
                 <h2 className="text-3xl font-bold mb-8 italic border-l-4 border-orange-500 pl-6">Project Results</h2>
                 <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
                     {resultImages.map((src, i) => (
-                        <div key={i} className="aspect-square rounded-2xl overflow-hidden border border-white/10 bg-white/5 relative group">
+                        <div key={i} className="aspect-square rounded-2xl overflow-hidden border border-border-main bg-card-main relative group">
                             <div className="absolute inset-0 flex items-center justify-center text-white/10 italic text-[10px] uppercase tracking-widest text-center px-4">
                                 Result Analysis {i + 1}
                             </div>
@@ -172,7 +172,7 @@ const Tire = () => {
                         </div>
                     ))}
                 </div>
-                <p className="text-lg text-white/60 leading-relaxed font-light mt-8">
+                <p className="text-lg text-text-dim leading-relaxed font-light mt-8">
                     The experiment successfully produced three major products:
 
                     Pyrolysis oil – a dark liquid with potential fuel applications
@@ -188,16 +188,16 @@ const Tire = () => {
             </section>
 
             {/* Conclusion & Declaration */}
-            <section className="mb-20 reveal p-12 rounded-[3.5rem] bg-gradient-to-br from-white/5 to-transparent border border-white/10">
-                <h2 className="text-3xl font-bold mb-8 italic">Conclusion & Declaration</h2>
-                <div className="space-y-6 text-white/60 leading-relaxed font-light italic">
+            <section className="mb-20 reveal p-12 rounded-[3.5rem] bg-card-main border border-border-main">
+                <h2 className="text-3xl font-bold mb-8 italic text-text-main">Conclusion & Declaration</h2>
+                <div className="space-y-6 text-text-dim leading-relaxed font-light italic">
                     <p>
                         The study confirms that pyrolysis offers an environmentally sustainable and economically promising solution for managing waste tires. By converting non-biodegradable waste into usable fuel and industrial materials, the process supports waste reduction and energy recovery efforts.
 
                         This research contributes to sustainable waste management practices and circular economy initiatives.
                     </p>
-                    <div className="pt-8 border-t border-white/5">
-                        <p className="text-sm uppercase tracking-widest font-bold text-white mb-2">Declaration</p>
+                    <div className="pt-8 border-t border-border-main">
+                        <p className="text-sm uppercase tracking-widest font-bold text-text-main mb-2">Declaration</p>
                         <p className="text-xs">
                             The Pyrolysis of Waste Tires project was conducted by a team of four undergraduate students. As a key team member, I actively participated in the experimental setup, data analysis, and interpretation of results. This collaborative experience strengthened my research, teamwork, and problem-solving skills.                        </p>
                     </div>
@@ -205,11 +205,11 @@ const Tire = () => {
             </section>
 
             {/* Downloads */}
-            <div className="reveal flex flex-wrap gap-6 pt-12 border-t border-white/5">
+            <div className="reveal flex flex-wrap gap-6 pt-12 border-t border-border-main">
                 <a
                     href="/files/tire-pyrolysis-article.pdf"
                     download
-                    className="flex items-center gap-4 px-8 py-4 bg-white text-black rounded-2xl font-black hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                    className="flex items-center gap-4 px-8 py-4 bg-text-main text-bg-main rounded-2xl font-black hover:scale-105 active:scale-95 transition-all shadow-xl"
                 >
                     <FileText size={20} /> DOWNLOAD FULL ARTICLE
                 </a>

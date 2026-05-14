@@ -50,48 +50,47 @@ const Contact = () => {
         }, sectionRef);
         return () => ctx.revert();
     }, []);
-
     return (
-        <div className="bg-[#050505]">
+        <div>
             <div ref={sectionRef} className="min-h-screen pt-40 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <div className="text-center mb-20 contact-item">
-                    <span className="text-xs uppercase tracking-[0.5em] text-white/40 font-bold mb-4 block">Get in touch</span>
-                    <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic text-white">
-                        LET'S <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">CONNECT</span>
+                    <span className="text-xs uppercase tracking-[0.5em] text-accent-primary font-bold mb-4 block">Get in touch</span>
+                    <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic text-text-main">
+                        LET'S <span className="text-accent-primary">CONNECT</span>
                     </h1>
-                    <p className="text-xl text-white/50 max-w-2xl mx-auto font-light">
+                    <p className="text-xl text-text-dim max-w-2xl mx-auto font-light">
                         Have a project in mind or just want to say hello? I'm always open to new opportunities and creative collaborations.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
                     {/* Contact Info */}
-                    <div className="space-y-12 contact-item text-white">
+                    <div className="space-y-12 contact-item text-text-main">
                         <div className="group cursor-pointer">
                             <div className="flex items-center gap-6 mb-4">
-                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:text-black transition-all">
+                                <div className="p-4 rounded-2xl bg-card-main border border-border-main group-hover:bg-text-main group-hover:text-bg-main transition-all">
                                     <Mail size={24} />
                                 </div>
                                 <h3 className="text-2xl font-bold">Email</h3>
                             </div>
-                            <p className="text-white/40 text-lg ml-20 group-hover:text-white transition-colors">agyeimchjunior@gmail.com</p>
+                            <p className="text-text-dim text-lg ml-20 group-hover:text-text-main transition-colors">agyeimchjunior@gmail.com</p>
                         </div>
 
                         <div className="group cursor-pointer">
                             <div className="flex items-center gap-6 mb-4">
-                                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-white group-hover:text-black transition-all">
+                                <div className="p-4 rounded-2xl bg-card-main border border-border-main group-hover:bg-text-main group-hover:text-bg-main transition-all">
                                     <MessageSquare size={24} />
                                 </div>
                                 <h3 className="text-2xl font-bold">Socials</h3>
                             </div>
                             <div className="flex gap-4 ml-20">
-                                <a href="https://github.com/AgyeiMichaelJunior" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center group/social">
+                                <a href="https://github.com/AgyeiMichaelJunior" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border-main hover:bg-card-main transition-all flex items-center justify-center group/social">
                                     <Github size={20} className="group-hover/social:scale-110 transition-transform" />
                                 </a>
-                                <a href="https://linkedin.com/in/agyeimichaeljunior" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center group/social">
+                                <a href="https://linkedin.com/in/agyeimichaeljunior" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border-main hover:bg-card-main transition-all flex items-center justify-center group/social">
                                     <Linkedin size={20} className="group-hover/social:scale-110 transition-transform" />
                                 </a>
-                                <a href="https://wa.me/233545722659" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center group/social">
+                                <a href="https://wa.me/233545722659" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border-main hover:bg-card-main transition-all flex items-center justify-center group/social">
                                     <Phone size={20} className="group-hover/social:scale-110 transition-transform" />
                                 </a>
                             </div>
@@ -100,21 +99,21 @@ const Contact = () => {
 
                     {/* Quick Message Form */}
                     <div className="contact-item">
-                        <form onSubmit={onSubmit} className="space-y-6 bg-white/[0.02] border border-white/5 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl relative overflow-hidden">
+                        <form onSubmit={onSubmit} className="space-y-6 bg-card-main border border-border-main p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl relative overflow-hidden">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <input
                                     type="text"
                                     name="name"
                                     required
                                     placeholder="Full Name"
-                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-white/40 transition-all text-white placeholder:text-white/20"
+                                    className="w-full bg-card-main border border-border-main rounded-2xl px-6 py-4 outline-none focus:border-text-dim/30 transition-all text-text-main placeholder:text-text-dim/40"
                                 />
                                 <input
                                     type="email"
                                     name="email"
                                     required
                                     placeholder="Email Address"
-                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-white/40 transition-all text-white placeholder:text-white/20"
+                                    className="w-full bg-card-main border border-border-main rounded-2xl px-6 py-4 outline-none focus:border-text-dim/30 transition-all text-text-main placeholder:text-text-dim/40"
                                 />
                             </div>
                             <textarea
@@ -122,13 +121,13 @@ const Contact = () => {
                                 name="message"
                                 required
                                 placeholder="Your Message"
-                                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-white/40 transition-all resize-none text-white placeholder:text-white/20"
+                                className="w-full bg-card-main border border-border-main rounded-2xl px-6 py-4 outline-none focus:border-text-dim/30 transition-all resize-none text-text-main placeholder:text-text-dim/40"
                             ></textarea>
 
                             <button
                                 disabled={isSubmitting}
                                 type="submit"
-                                className="w-full py-6 bg-white text-black rounded-2xl font-black text-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full py-6 bg-text-main text-bg-main rounded-2xl font-black text-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-4 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {isSubmitting ? "SENDING..." : "SEND MESSAGE"} <Send size={20} />
                             </button>

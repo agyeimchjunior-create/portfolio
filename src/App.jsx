@@ -13,7 +13,7 @@ import ProjectDetails from './pages/ProjectDetails';
 const App = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-[#050505]">
+      <div className="min-h-screen">
         <Navbar />
         <main>
           <Routes>
